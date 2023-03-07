@@ -536,16 +536,16 @@
           nativeMethods('reduce', false, function () {
             countMessagesPerUser(testTweets);
           });
-          noForLoops(countMessagesPerUser)
+          noForLoops(countMessagesPerUser);
           it('should return an object', function () {
             expect(countMessagesPerUser(testTweets)).to.be.an('object');
           });
           it('should return object with correct values', function () {
             var counts = {
-              "douglascalhoun": 5,
-              "mracus": 6,
-              "shawndrost": 5,
-              "sharksforcheap": 3
+              'douglascalhoun': 5,
+              'mracus': 6,
+              'shawndrost': 5,
+              'sharksforcheap': 3
             };
             expect(countMessagesPerUser(testTweets)).to.eql(counts);
           });
